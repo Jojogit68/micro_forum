@@ -31,8 +31,8 @@ class TopicFixtures extends Fixture implements DependentFixtureInterface
             $user = $users[$randomKey];
             $topic = new Topic();
             $topic
-                ->setTitle($faker->words(3, true))
-                ->setContent($faker->sentences(3, true))
+                ->setTitle($faker->realText(10))
+                ->setContent($faker->realText())
                 ->setAuthor($user)
             ;
             $manager->persist($topic);

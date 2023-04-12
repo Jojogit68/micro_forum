@@ -1,0 +1,22 @@
+{% extends '_layout/full-width.html.twig' %}
+
+{% block title %}Bienvenue sur MicroForum !{% endblock %}
+
+{% block content %}
+
+    
+
+    <div class="container">
+        <h2>Les derniers topics</h2>
+        <div class="row">
+            {% for topic in topics %}
+    {# {{ dump(topic) }} #}
+            <div class="col-md-4">
+                <h3>{{ topic.title}}</h3>
+                <h3>{{ topic.author.id}}</h3>
+                <p>{{ topic.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

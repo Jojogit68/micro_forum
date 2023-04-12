@@ -37,9 +37,10 @@ class CommentFixtures extends Fixture implements DependentFixtureInterface
             $randomKeyTopic = rand(0, $topicsLength);
             $topic = $topics[$randomKeyTopic];
             $comment = new Comment();
-            $topic
-                ->setContent($faker->sentences(3, true))
+            $comment
+                ->setContent($faker->realText())
                 ->setAuthor($user)
+                ->setTopic($topic)
             ;
             $manager->persist($comment);
         }

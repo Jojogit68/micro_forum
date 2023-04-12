@@ -38,7 +38,9 @@ class Topic
     public function __construct()
     {
         $this->comments = new ArrayCollection();
-        $this->createdAt = new \DateTimeImmutable("now");
+        $this->createdAt = new \DateTimeImmutable();
+        $this->updatedAt = new \DateTimeImmutable();
+
 
     }
 
